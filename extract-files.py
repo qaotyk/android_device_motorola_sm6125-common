@@ -27,7 +27,12 @@ from extract_utils.utils import (
 )
 
 namespace_imports = [
-    'device/lineage/example',
+    'device/motorola/sm6125-common',
+    'hardware/motorola'
+    'hardware/qcom-caf/sm8150'
+    'hardware/qcom-caf/wlan'
+    'vendor/qcom/opensource/dataservices'
+    'vendor/qcom/opensource/display'
 ]
 
 
@@ -38,9 +43,9 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
-        'vendor.twopac.hardware.xoo@1.0',
-        'vendor.twopac.hardware.oxo@1.0',
-        'vendor.twopac.hardware.oox@1.0',
+        'com.qualcomm.qti.dpm.api@1.0',
+        'vendor.qti.hardware.fm@1.0',
+        'vendor.qti.imsrtpservice@3.0
     ): lib_fixup_vendor_suffix,
     'libwpa_client': lib_fixup_remove,
 }
@@ -73,37 +78,26 @@ def blob_fixup_return_1(
 
 
 blob_fixups: blob_fixups_user_type = {
-    'vendor/app/Test.apk': blob_fixup()
-        .apktool_patch('blob-patches/TestApk.patch', '-s'),
-    'vendor/etc/test.conf': blob_fixup()
-        .patch_file('blob-patches/TestConf.patch')
-        .regex_replace('(LOG_.*_ENABLED)=1', '\\1=0')
-        .add_line_if_missing('DEBUG=0'),
-    ('vendor/etc/test.0.xml', 'vendor/etc/test.1.xml'): blob_fixup()
-        .fix_xml(),
-    'vendor/lib/test.so': blob_fixup()
-        .patchelf_version('0_17_2')
-        .fix_soname()
-        .add_needed('to_add.so')
-        .remove_needed('to_remove.so')
-        .replace_needed('from.so', 'to.so')
-        .clear_symbol_version('rpc_call_invoke')
-        .strip_debug_sections()
-        .binary_regex_replace(b'\xFF\x00\x00\x94', b'\xFE\x00\x00\x94')
-        .sig_replace('C0 03 5F D6 ?? ?? ?? ?? C0 03 5F D6', '1F 20 03 D5')
-        .call(blob_fixup_return_1, 'license_check'),
+    'system_ext/etc/permissions/moto-telephony.xml': blob_fixup()
+        .regex_replace('/system/', '/system_ext/'),
+    'system_ext/priv-app/ims/ims.apk': blob_fixup()
+        .apktool_patch('ims-patches'),
+    'vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so': blob_fixup()
+        .sig_replace('13 0A 00 94', '1F 20 03 D5'),
+    'vendor/lib64/libdpps.so': blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
+    'vendor/lib64/libwvhidl.so': blob_fixup()
+        .add_needed('libcrypto_shim.so'),
+    'vendor/lib64/sensors.moto.so': blob_fixup()
+        .add_needed('libbase_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'example',
-    'lineage',
+    'sm6125-common',
+    'motorola',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
-)
-
-module.add_proprietary_file('proprietary-files-phone.txt').add_copy_files_guard(
-    'TARGET_IS_TABLET', 'true', invert=True
 )
 
 if __name__ == '__main__':
