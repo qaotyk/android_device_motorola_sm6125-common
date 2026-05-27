@@ -74,6 +74,23 @@ PRODUCT_PACKAGES += \
 # GPS
 
 # Init
+PRODUCT_PACKAGES += \
+    init.class_main.sh \
+    init.mdm.sh \
+    init.mmi.charge_only.rc \
+    init.mmi.rc \
+    init.mmi.touch.sh \
+    init.oem.hw.sh \
+    init.qcom.class_core.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.power.rc \
+    init.qcom.rc \
+    init.qcom.sensors.sh \
+    init.qcom.sh \
+    init.recovery.qcom.rc \
+    init.target.rc \
+    ueventd.rc
+
 
 # Media
 
