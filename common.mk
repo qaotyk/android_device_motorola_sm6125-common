@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Inherit virtual_ab_ota configurations. Mapping virtual blocks on partition /data under OTA updates.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+
 # A/B
 AB_OTA_UPDATER := true
 
@@ -60,6 +63,11 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # EGL
 
 # Fastbootd
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.2-impl \
+    android.hardware.boot@1.2-service \
+    android.hardware.fastboot@1.1-impl \
+    android.hardware.fastboot@1.1-service
 
 # FM
 
