@@ -72,6 +72,10 @@ BOARD_HAVE_BLUETOOTH_QCOM := true
 BOARD_HAVE_QCOM_BT_IPC := true
 QCOM_BT_USE_BTNV := true
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_trinket
+TARGET_RECOVERY_DEVICE_MODULES := libinit_trinket
+
 # Kernel configuration
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
