@@ -102,18 +102,3 @@ prebuilt_etc {
     src: "ueventd.rc",
     vendor: true,
 }
-
-// Init library
-cc_library_static {
-    name: "libinit_trinket",
-    recovery_available: true,
-    srcs: [
-        "init_trinket.cpp",
-        "DeviceLibinit.cpp"
-    ],
-    include_dirs: [
-        "system/core/base/include",
-        "system/core/init"
-    ]
-    shared_libs: ["libbase"]
-}

@@ -1,0 +1,21 @@
+//
+// Copyright (C) 2026 The Android Open Source Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+// Init library
+
+cc_library_static {
+    name: "libinit_trinket",
+    recovery_available: true,
+    srcs: [
+        "init_trinket.cpp",
+        "DeviceLibinit.cpp"
+    ],
+    include_dirs: [
+        "system/core/base/include",
+        "system/core/init"
+    ]
+    shared_libs: ["libbase"]
+}
