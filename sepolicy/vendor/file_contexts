@@ -11,3 +11,6 @@
 # Sockets and Data Directories
 /dev/socket/location(/.*)?                                          u:object_r:location_socket:s0
 /data/vendor/location(/.*)?                                         u:object_r:location_data_file:s0
+
+# Lights HAL
+/vendor/bin/hw/android\.hardware\.lights-service\.trinket           u:object_r:hal_light_default_exec:s0
