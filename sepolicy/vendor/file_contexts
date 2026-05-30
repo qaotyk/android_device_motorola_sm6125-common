@@ -1,2 +1,13 @@
 # Boot Control HAL
 /vendor/bin/hw/android\.hardware\.boot@1\.2-service                  u:object_r:hal_bootctl_default_exec:s0
+
+# GPS / GNSS HAL
+/vendor/bin/hw/android\.hardware\.gnss-aidl-service-qti             u:object_r:hal_gnss_default_exec:s0
+/vendor/bin/hw/android\.hardware\.gnss@1\.0-service-qti             u:object_r:hal_gnss_default_exec:s0
+/vendor/bin/hw/android\.hardware\.gnss@1\.1-service-qti             u:object_r:hal_gnss_default_exec:s0
+/vendor/bin/hw/android\.hardware\.gnss@2\.0-service-qti             u:object_r:hal_gnss_default_exec:s0
+/vendor/bin/hw/android\.hardware\.gnss@2\.1-service-qti             u:object_r:hal_gnss_default_exec:s0
+
+# Sockets and Data Directories
+/dev/socket/location(/.*)?                                          u:object_r:location_socket:s0
+/data/vendor/location(/.*)?                                         u:object_r:location_data_file:s0
