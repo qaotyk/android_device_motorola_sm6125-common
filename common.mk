@@ -160,6 +160,10 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Ramdisk
 
 # Public Libraries
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
+    $(COMMON_PATH)/configs/public.libraries-qti.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries-qti.txt \
+    $(COMMON_PATH)/configs/public.libraries-ext-qti.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-qti.txt
 
 # RIL
 
