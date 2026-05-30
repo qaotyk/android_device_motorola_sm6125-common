@@ -74,6 +74,35 @@ PRODUCT_PACKAGES += \
 # FM
 
 # GPS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss-aidl-impl-qti \
+    android.hardware.gnss-aidl-service-qti \
+    gps.conf \
+    batching.conf \
+    gnss_antenna_info.conf \
+    gnss@2.0-base.policy \
+    gnss@2.0-xtra-daemon.policy \
+    gnss@2.0-qsap-location.policy \
+    gnss@2.0-xtwifi-client.policy \
+    gnss@2.0-edgnss-daemon.policy \
+    libloc_pla_headers \
+    liblocation_api_headers \
+    libgps.utils_headers \
+    liblocation_api \
+    libgps.utils \
+    libbatching \
+    libgeofencing \
+    libloc_core \
+    libgnss \
+    libloc_api_v02 \
+    libgnsspps \
+    libsynergy_loc_api \
+    izat_remote_api_headers \
+    loc_sll_if_headers \
+    libloc_socket \
+    liblocation_api_msg \
+    liblocation_integration_api \
+    liblocation_client_api
 
 # Init
 PRODUCT_PACKAGES += \
@@ -97,6 +126,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.lights.service.trinket
 
+# Location - Soong configuration
+$(call soong_config_set, qtilocation, feature_nhz, false)
+$(call soong_config_set, qtilocation, feature_locauto, false)
+
 # Media
 
 # Media - configs
@@ -113,9 +146,16 @@ PRODUCT_PACKAGES += \
 
 # Partitions
 
-# Permissions
+# Permissions - GPS
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml \
+    frameworks/native/data/etc/android.hardware.location.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.xml
 
-# Properties
+# Properties - GPS/GNSS
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.overlay.izat.optin=rro \
+    persist.vendor.gps.handover=true \
+    ro.hardware.gps=default
 
 # Ramdisk
 
