@@ -136,6 +136,7 @@ TARGET_RECOVERY_UI_LIB := librecovery_ui_motorola
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Sepolicy
+BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 include hardware/motorola/sepolicy/qti/SEPolicy.mk
 

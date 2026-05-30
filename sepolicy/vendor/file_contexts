@@ -1,0 +1,2 @@
+# Boot Control HAL
+/vendor/bin/hw/android\.hardware\.boot@1\.2-service                  u:object_r:hal_bootctl_default_exec:s0

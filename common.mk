@@ -53,6 +53,10 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Audio - configs
 
 # Bootctrl
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.2-impl-qti \
+    android.hardware.boot@1.2-service \
+    bootctrl.trinket
 
 # Camera
 
@@ -64,8 +68,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Fastbootd
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-impl \
-    android.hardware.boot@1.2-service \
     android.hardware.fastboot@1.1-impl \
     android.hardware.fastboot@1.1-service
 
