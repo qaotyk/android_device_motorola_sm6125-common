@@ -91,6 +91,9 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.rc
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.lights.service.trinket
 
 # Media
 

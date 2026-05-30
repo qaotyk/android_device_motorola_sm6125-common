@@ -15,7 +15,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-service vendor.qti.light /vendor/bin/hw/vendor.qti.hardware.lights.service
+service vendor.light-trinket /vendor/bin/hw/android.hardware.lights-service.trinket
     class hal
     user system
     group system

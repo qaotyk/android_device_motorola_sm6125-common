@@ -18,7 +18,8 @@
  */
 
 /*
- * Changes from Qualcomm Innovation Center are provided under the following license:
+ * Changes from Qualcomm Innovation Center are provided under the following
+ * license:
  *
  * Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
  *
@@ -59,6 +60,8 @@
 
 #pragma once
 
+#define LOG_TAG "android.hardware.lights-service.trinket"
+
 #include <aidl/android/hardware/light/BnLights.h>
 #include <hardware/hardware.h>
 #include <hardware/lights.h>
@@ -70,19 +73,19 @@ namespace hardware {
 namespace light {
 
 class Lights : public BnLights {
-    public:
-      Lights();
-      ndk::ScopedAStatus setLightState(int id, const HwLightState& state) override;
-      ndk::ScopedAStatus getLights(std::vector<HwLight>* types) override;
+public:
+  Lights();
+  ndk::ScopedAStatus setLightState(int id, const HwLightState &state) override;
+  ndk::ScopedAStatus getLights(std::vector<HwLight> *types) override;
 
-    private:
-      std::vector<HwLight> mAvailableLights;
-      int setRgbLedsParams(const HwLightState& state);
-      bool mBatteryNotification;
-      bool mLedDetected;
+private:
+  std::vector<HwLight> mAvailableLights;
+  int setRgbLedsParams(const HwLightState &state);
+  bool mBatteryNotification;
+  bool mLedDetected;
 };
 
-}  // namespace light
-}  // namespace hardware
-}  // namespace android
-}  // namespace aidl
+} // namespace light
+} // namespace hardware
+} // namespace android
+} // namespace aidl

@@ -1,8 +1,8 @@
 cc_binary {
-    name: "vendor.qti.hardware.lights.service",
+    name: "android.hardware.lights-service.trinket",
     relative_install_path: "hw",
-    init_rc: ["vendor.qti.hardware.lights.service.rc"],
-    vintf_fragments: ["vendor.qti.hardware.lights.service.xml"],
+    init_rc: ["android.hardware.lights-service.trinket.rc"],
+    vintf_fragments: ["android.hardware.lights-service.trinket.xml"],
     vendor: true,
     shared_libs: [
         "libbase",

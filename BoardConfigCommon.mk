@@ -109,6 +109,10 @@ BOARD_KERNEL_CMDLINE := \
 	firmware_class.path=/vendor/firmware_mnt/image
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
+# Lights
+TARGET_PROVIDES_LIBLIGHT := true
+LIGHT_HAL_IMPL := $(COMMON_PATH)/lights
+
 # Ramdisk
 BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_ROOT_EXTRA_SYMLINKS := \
