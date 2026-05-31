@@ -313,6 +313,11 @@ PRODUCT_PACKAGES += \
 # RenderScript
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
+# Security
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.cacert@1.0 \
+    vendor.qti.hardware.cryptfshw@1.0-service \
+    vendor.qti.hardware.qteeconnector@1.0
 # Vendor Service Manager
 PRODUCT_PACKAGES += \
     vndservicemanager
