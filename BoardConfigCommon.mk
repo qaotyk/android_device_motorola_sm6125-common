@@ -117,6 +117,9 @@ LIGHT_HAL_IMPL := $(COMMON_PATH)/lights
 # Ramdisk
 BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_ROOT_EXTRA_SYMLINKS := \
+    /vendor/dsp:/dsp \
+    /vendor/firmware_mnt/image:/firmware/image \
+    /vendor/firmware_mnt/verinfo:/firmware/verinfo \
     /vendor/fsg:/fsg
 
 # Kernel Modules - Audio
