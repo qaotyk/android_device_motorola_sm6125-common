@@ -294,6 +294,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.embmssl@1.1
 
 # Sensors
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.sensorscalibrate@1.0-service
 
 # IMS
 
