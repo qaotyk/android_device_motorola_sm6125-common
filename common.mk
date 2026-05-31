@@ -160,35 +160,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.fm@1.0-service
 
 # GPS
-PRODUCT_PACKAGES += \
-    android.hardware.gnss-aidl-impl-qti \
-    android.hardware.gnss-aidl-service-qti \
-    gps.conf \
-    batching.conf \
-    gnss_antenna_info.conf \
-    gnss@2.0-base.policy \
-    gnss@2.0-xtra-daemon.policy \
-    gnss@2.0-qsap-location.policy \
-    gnss@2.0-xtwifi-client.policy \
-    gnss@2.0-edgnss-daemon.policy \
-    libloc_pla_headers \
-    liblocation_api_headers \
-    libgps.utils_headers \
-    liblocation_api \
-    libgps.utils \
-    libbatching \
-    libgeofencing \
-    libloc_core \
-    libgnss \
-    libloc_api_v02 \
-    libgnsspps \
-    libsynergy_loc_api \
-    izat_remote_api_headers \
-    loc_sll_if_headers \
-    libloc_socket \
-    liblocation_api_msg \
-    liblocation_integration_api \
-    liblocation_client_api
+$(call inherit-product, $(COMMON_PATH)/gps/gps_vendor_product.mk)
+$(call inherit-product, $(COMMON_PATH)/location/gps_vendor_product.mk)
 
 # Init
 PRODUCT_PACKAGES += \
@@ -211,10 +184,6 @@ PRODUCT_PACKAGES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.lights.service.trinket
-
-# Location - Soong configuration
-$(call soong_config_set, qtilocation, feature_nhz, false)
-$(call soong_config_set, qtilocation, feature_locauto, false)
 
 # Media
 PRODUCT_PACKAGES += \
