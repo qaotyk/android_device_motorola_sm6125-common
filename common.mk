@@ -51,6 +51,17 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Audio
 
 # Audio - configs
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    $(COMMON_PATH)/audio/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
+    $(COMMON_PATH)/audio/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
+    $(COMMON_PATH)/audio/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
+    $(COMMON_PATH)/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
+    $(COMMON_PATH)/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
+    $(COMMON_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+    $(COMMON_PATH)/audio/audio_ext_spkr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_ext_spkr.conf \
+    $(COMMON_PATH)/audio/audio_platform_info_cooke.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_cooke.xml \
+    $(COMMON_PATH)/audio/mixer_paths_cooke.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_cooke.xml
 
 # Bootctrl
 PRODUCT_PACKAGES += \
