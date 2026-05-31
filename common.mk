@@ -156,6 +156,8 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service
 
 # FM
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.fm@1.0-service
 
 # GPS
 PRODUCT_PACKAGES += \
