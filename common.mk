@@ -108,6 +108,11 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl-qti \
     android.hardware.camera.provider@2.4-service
 
+# Configstore
+PRODUCT_PACKAGES += \
+    android.hardware.configstore@1.1-service \
+    vendor.qti.hardware.capabilityconfigstore@1.0
+
 # Display - Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
