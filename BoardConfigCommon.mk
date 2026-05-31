@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-COMMON_PATH := device/motorola/sm6125-common
+COMMON_PATH ?= device/motorola/sm6125-common
 
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
