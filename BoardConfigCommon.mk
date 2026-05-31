@@ -179,7 +179,9 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # VINTF
-DEVICE_MANIFEST_FILE += $(COMMON_PATH)/vintf/manifest.xml
+DEVICE_MANIFEST_FILE += \
+    $(COMMON_PATH)/vintf/manifest.xml \
+    $(COMMON_PATH)/vintf/manifest-qva.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(COMMON_PATH)/vintf/framework_compatibility_matrix.xml
 
 # Inherit from the proprietary version
