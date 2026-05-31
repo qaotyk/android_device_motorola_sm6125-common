@@ -145,6 +145,16 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl \
     android.hardware.fastboot@1.1-service
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-service
+
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0-impl \
+    android.hardware.keymaster@4.0-service
+
 # FM
 
 # GPS
