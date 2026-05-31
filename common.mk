@@ -298,6 +298,13 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.sensorscalibrate@1.0-service
 
 # IMS
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.radio.ims@1.6 \
+    vendor.qti.ims.callinfo@1.0 \
+    vendor.qti.ims.factory@1.0 \
+    vendor.qti.imsrtpservice@3.0 \
+    com.qualcomm.qti.imscmservice@2.2 \
+    com.qualcomm.qti.uceservice@2.3
 
 # Thermal
 
