@@ -116,6 +116,8 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
 # EGL
+PRODUCT_PACKAGES += \
+    libGLES_android
 
 # Fastbootd
 PRODUCT_PACKAGES += \
@@ -190,6 +192,8 @@ $(call soong_config_set, qtilocation, feature_locauto, false)
 # OEM Partition
 
 # Perf
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.perf@2.2-service
 
 # Power
 
@@ -241,6 +245,8 @@ PRODUCT_COPY_FILES += \
 # USB configs
 
 # Vendor Service Manager
+PRODUCT_PACKAGES += \
+    vndservicemanager
 
 # Vibrator
 PRODUCT_PACKAGES += \
@@ -248,7 +254,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
+
 # Webview
+PRODUCT_PACKAGES += \
+    webview
 
 # Wifi - WCNSS
 PRODUCT_COPY_FILES += \
