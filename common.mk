@@ -112,6 +112,8 @@ PRODUCT_PACKAGES += \
     memtrack.trinket
 
 # DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm-service.clearkey
 
 # EGL
 
