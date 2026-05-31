@@ -318,6 +318,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.cacert@1.0 \
     vendor.qti.hardware.cryptfshw@1.0-service \
     vendor.qti.hardware.qteeconnector@1.0
+# DSP
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.dsp@1.0
 # Vendor Service Manager
 PRODUCT_PACKAGES += \
     vndservicemanager
