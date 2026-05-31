@@ -70,10 +70,14 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service
 
-# Audio - Bluetooth
+# Bluetooth
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl \
+    android.hardware.bluetooth@1.0-service \
     android.hardware.bluetooth.audio@2.0-service \
-    android.hardware.bluetooth@1.0-service
+    vendor.qti.hardware.bluetooth_audio@2.0 \
+    vendor.qti.hardware.bluetooth_sar@1.1 \
+    vendor.qti.hardware.btconfigstore@2.0
 
 # Audio - Soundtrigger
 PRODUCT_PACKAGES += \
