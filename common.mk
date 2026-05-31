@@ -217,6 +217,9 @@ $(call soong_config_set, qtilocation, feature_nhz, false)
 $(call soong_config_set, qtilocation, feature_locauto, false)
 
 # Media
+PRODUCT_PACKAGES += \
+    android.hardware.media.omx@1.0-impl \
+    android.hardware.media.omx@1.0-service
 
 # Media - configs
 
