@@ -243,7 +243,11 @@ PRODUCT_COPY_FILES += \
 # Vendor Service Manager
 
 # Vibrator
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.vibrator.service
 
+PRODUCT_COPY_FILES += \
+    vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 # Webview
 
 # Wifi - WCNSS
