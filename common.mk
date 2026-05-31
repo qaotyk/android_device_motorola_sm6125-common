@@ -310,6 +310,9 @@ PRODUCT_PACKAGES += \
 
 # USB configs
 
+# RenderScript
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
 # Vendor Service Manager
 PRODUCT_PACKAGES += \
     vndservicemanager
