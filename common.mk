@@ -337,6 +337,9 @@ PRODUCT_PACKAGES += \
     webview
 
 # Wifi - WCNSS
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.wifi.wifilearner@1.0
+
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
     $(COMMON_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
