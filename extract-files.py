@@ -28,11 +28,11 @@ from extract_utils.utils import (
 
 namespace_imports = [
     'device/motorola/sm6125-common',
-    'hardware/motorola'
-    'hardware/qcom-caf/sm8150'
-    'hardware/qcom-caf/wlan'
-    'vendor/qcom/opensource/dataservices'
-    'vendor/qcom/opensource/display'
+    'hardware/motorola',
+    'hardware/qcom-caf/sm8150',
+    'hardware/qcom-caf/wlan',
+    'vendor/qcom/opensource/dataservices',
+    'vendor/qcom/opensource/display',
 ]
 
 
@@ -45,7 +45,7 @@ lib_fixups: lib_fixups_user_type = {
     (
         'com.qualcomm.qti.dpm.api@1.0',
         'vendor.qti.hardware.fm@1.0',
-        'vendor.qti.imsrtpservice@3.0
+        'vendor.qti.imsrtpservice@3.0',
     ): lib_fixup_vendor_suffix,
     'libwpa_client': lib_fixup_remove,
 }
