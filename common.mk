@@ -122,6 +122,8 @@ PRODUCT_PACKAGES += \
 # Display - Vendor Specifics
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.allocator-service \
+    vendor.display.color@1.3 \
+    vendor.display.postproc@1.0
 
 # Display - Hardware
 PRODUCT_PACKAGES += \
