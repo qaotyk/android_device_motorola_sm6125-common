@@ -316,3 +316,4 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
 # Get non-open-source specific aspects
+$(call inherit-product, vendor/motorola/sm6125-common/sm6125-common-vendor.mk)
