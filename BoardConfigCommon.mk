@@ -123,8 +123,43 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/fsg:/fsg
 
 # Kernel Modules - Audio
+BOARD_KERNEL_MODULE_ALIASES += \
+    adsp_loader_dlkm.ko:audio_adsp_loader.ko \
+    apr_dlkm.ko:audio_apr.ko \
+    bolero_cdc_dlkm.ko:audio_bolero_cdc.ko \
+    cpe_lsm_dlkm.ko:audio_cpe_lsm.ko \
+    hdmi_dlkm.ko:audio_hdmi.ko \
+    machine_dlkm.ko:audio_machine_trinket.ko \
+    mbhc_dlkm.ko:audio_mbhc.ko \
+    native_dlkm.ko:audio_native.ko \
+    pinctrl_wcd_dlkm.ko:audio_pinctrl_wcd.ko \
+    platform_dlkm.ko:audio_platform.ko \
+    q6_dlkm.ko:audio_q6.ko \
+    q6_notifier_dlkm.ko:audio_q6_notifier.ko \
+    q6_pdr_dlkm.ko:audio_q6_pdr.ko \
+    rx_macro_dlkm.ko:audio_rx_macro.ko \
+    snd_event_dlkm.ko:audio_snd_event.ko \
+    stub_dlkm.ko:audio_stub.ko \
+    swr_ctrl_dlkm.ko:audio_swr_ctrl.ko \
+    swr_dlkm.ko:audio_swr.ko \
+    tx_macro_dlkm.ko:audio_tx_macro.ko \
+    usf_dlkm.ko:audio_usf.ko \
+    va_macro_dlkm.ko:audio_va_macro.ko \
+    wcd9335_dlkm.ko:audio_wcd9335.ko \
+    wcd934x_dlkm.ko:audio_wcd934x.ko \
+    wcd937x_dlkm.ko:audio_wcd937x.ko \
+    wcd937x_slave_dlkm.ko:audio_wcd937x_slave.ko \
+    wcd9xxx_dlkm.ko:audio_wcd9xxx.ko \
+    wcd_core_dlkm.ko:audio_wcd_core.ko \
+    wcd_cpe_dlkm.ko:audio_wcd_cpe.ko \
+    wcd_spi_dlkm.ko:audio_wcd_spi.ko \
+    wglink_dlkm.ko:audio_wglink.ko \
+    wsa881x_dlkm.ko:audio_wsa881x.ko \
+    wsa_macro_dlkm.ko:audio_wsa_macro.ko
 
 # Kernel Modules - WLAN
+BOARD_KERNEL_MODULE_ALIASES += \
+    wlan.ko:qca_cld3_wlan.ko
 
 # Partitions - System
 
