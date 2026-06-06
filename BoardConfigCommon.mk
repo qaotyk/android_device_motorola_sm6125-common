@@ -72,6 +72,20 @@ BOARD_HAVE_BLUETOOTH_QCOM := true
 BOARD_HAVE_QCOM_BT_IPC := true
 QCOM_BT_USE_BTNV := true
 
+# Dynamic Partitions
+BOARD_USE_DYNAMIC_PARTITIONS := true
+
+# Dynamic Partitions Groups
+BOARD_SUPER_PARTITION_GROUPS := motorola_dynamic_partitions
+
+# Dynamic Partitions List
+BOARD_MOTOROLA_DYNAMIC_PARTITIONS_PARTITION_LIST := \
+    system \
+    system_ext \
+    product \
+    vendor \
+    odm
+    
 # Init
 TARGET_PROVIDES_DEVICE_LIBINIT := true
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_trinket
@@ -89,7 +103,6 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00008000
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_BOOT_HEADER_VERSION := 2
-
 
 # Kernel commandline
 BOARD_KERNEL_CMDLINE := \
