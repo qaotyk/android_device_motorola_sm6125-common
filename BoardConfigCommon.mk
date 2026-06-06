@@ -91,6 +91,12 @@ TARGET_PROVIDES_DEVICE_LIBINIT := true
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_trinket
 TARGET_RECOVERY_DEVICE_MODULES := libinit_trinket
 
+# Kernel - Bootimage
+BOARD_MKBOOTIMG_ARGS := \
+	--ramdisk_offset $(BOARD_RAMDISK_OFFSET) \
+	--tags_offset $(BOARD_KERNEL_TAGS_OFFSET) \
+	--header_version $(BOARD_BOOT_HEADER_VERSION)
+
 # Kernel configuration
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
