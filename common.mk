@@ -149,8 +149,9 @@ PRODUCT_PACKAGES += \
 
 # Fastbootd
 PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.1-impl \
-    android.hardware.fastboot@1.1-service
+    android.hardware.fastboot@1.1-impl-mock \
+    android.hardware.fastboot@1.1-service \
+    fastbootd
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
