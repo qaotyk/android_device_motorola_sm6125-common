@@ -181,14 +181,19 @@ BOARD_KERNEL_MODULE_ALIASES += \
     wlan.ko:qca_cld3_wlan.ko
 
 # Partitions - System
+BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # Partitions - Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_RECOVERY_UI_LIB := librecovery_ui_motorola
 
 # Partitions - ODM
+BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_COPY_OUT_ODM := odm
 
 # Partitions - Vendor
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_COPY_OUT_VENDOR := vendor
 
 # Security
 BOARD_USES_METADATA_PARTITION := true
