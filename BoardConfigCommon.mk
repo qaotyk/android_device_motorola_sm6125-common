@@ -190,6 +190,10 @@ TARGET_RECOVERY_UI_LIB := librecovery_ui_motorola
 
 # Partitions - Vendor
 
+# Security
+BOARD_USES_METADATA_PARTITION := true
+BOARD_METADATAIMAGE_PARTITION_SIZE := 16777216
+
 # RIL Service
 ENABLE_VENDOR_RIL_SERVICE := true
 
