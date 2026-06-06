@@ -29,7 +29,11 @@ AB_OTA_PARTITIONS += \
     vbmeta_system \
     vendor
 
-ifneq ($(TARGET_DEVICE),doha)
+ifeq ($(TARGET_DEVICE),doha)
+AB_OTA_PARTITIONS += \
+    oem \
+    oem_other
+else
 AB_OTA_PARTITIONS += recovery
 endif
 
