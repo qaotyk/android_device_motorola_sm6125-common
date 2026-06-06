@@ -154,13 +154,12 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-impl \
-    android.hardware.gatekeeper@1.0-service
+    android.hardware.gatekeeper@1.0.vendor
 
 # Keymaster
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.0-impl \
-    android.hardware.keymaster@4.0-service
+    android.hardware.keymaster@4.0.vendor \
+    android.hardware.keymaster@4.1.vendor
 
 # FM
 PRODUCT_PACKAGES += \
