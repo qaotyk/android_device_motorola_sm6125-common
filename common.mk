@@ -27,8 +27,11 @@ AB_OTA_PARTITIONS += \
     system_ext \
     vbmeta \
     vbmeta_system \
-    recovery \
     vendor
+
+ifneq ($(TARGET_DEVICE),doha)
+AB_OTA_PARTITIONS += recovery
+endif
 
 PRODUCT_PACKAGES += \
     update_engine \
