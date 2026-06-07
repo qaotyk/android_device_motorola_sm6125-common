@@ -206,9 +206,6 @@ PRODUCT_PACKAGES += \
 
 # Media - configs
 
-# NFC
-
-# OEM Partition
 
 # Perf
 PRODUCT_PACKAGES += \
@@ -223,7 +220,6 @@ PRODUCT_COPY_FILES += \
 
 # Overlay
 
-# Partitions
 
 # Permissions - GPS
 PRODUCT_COPY_FILES += \
@@ -249,8 +245,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.egl=adreno \
     ro.hardware.vulkan=adreno \
     ro.opengles.version=196610
-
-# Ramdisk
 
 # Public Libraries
 PRODUCT_COPY_FILES += \
@@ -290,6 +284,8 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.uceservice@2.3
 
 # Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal-service.qti
 
 # USB configs
 
