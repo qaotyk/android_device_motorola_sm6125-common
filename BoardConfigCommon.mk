@@ -45,6 +45,11 @@ BOARD_USES_QCOM_HARDWARE := true
 QCOM_BOARD_PLATFORMS := trinket
 TARGET_BOARD_COMMON_PATH := hardware/qcom-caf/sm8150
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := \
+    $(COMMON_PATH)/config.fs \
+    $(COMMON_PATH)/mot_aids.fs
+
 # AVB
 BOARD_USES_HWC2 := true
 BOARD_AVB_ENABLE := true
