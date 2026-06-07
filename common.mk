@@ -321,6 +321,11 @@ PRODUCT_PACKAGES += \
 
 # Wifi - WCNSS
 PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
+    hostapd \
+    libwpa_client \
+    wpa_supplicant \
+    wpa_supplicant.conf \
     vendor.qti.hardware.wifi.wifilearner@1.0
 
 PRODUCT_COPY_FILES += \
