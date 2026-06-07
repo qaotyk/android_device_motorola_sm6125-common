@@ -18,6 +18,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 # Inherit developer_gsi_keys configuration.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
+# Inherit dalvik-heap configuration.
+$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
+
 # A/B
 AB_OTA_UPDATER := true
 
@@ -131,7 +134,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
-    android.hardware.graphics.composer@2.4-service \
+    android.hardware.graphics.composer@2.4-service
 
 # Display - Vendor Specifics
 PRODUCT_PACKAGES += \
@@ -204,9 +207,6 @@ PRODUCT_PACKAGES += \
     android.hardware.media.omx@1.0-impl \
     android.hardware.media.omx@1.0-service
 
-# Media - configs
-
-
 # Perf
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2-service
@@ -217,9 +217,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
-
-# Overlay
-
 
 # Permissions - GPS
 PRODUCT_COPY_FILES += \
