@@ -15,6 +15,9 @@
 # Inherit virtual_ab_ota configurations. Mapping virtual blocks on partition /data under OTA updates.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
+# Inherit developer_gsi_keys configuration.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
+
 # A/B
 AB_OTA_UPDATER := true
 
