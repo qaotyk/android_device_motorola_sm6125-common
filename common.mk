@@ -219,8 +219,8 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
 # Partitions
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
+PRODUCT_PACKAGES += \
+    fstab.qcom
 
 # Permissions - GPS
 PRODUCT_COPY_FILES += \
